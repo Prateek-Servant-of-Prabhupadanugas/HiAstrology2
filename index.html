@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HiAstrology - Know Your Stars</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #e6f2ff, #cce0ff);
+      color: #003366;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main-container {
+      width: 100%;
+      max-width: 500px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      border-radius: 20px;
+      padding: 30px 20px;
+      margin: 30px;
+      box-shadow: 0 8px 20px rgba(0, 51, 102, 0.2);
+      text-align: center;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      margin: 0 auto 10px;
+      background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/Zodiac-symbols-transparent.png/600px-Zodiac-symbols-transparent.png') no-repeat center/cover;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #002244;
+    }
+
+    p.subheading {
+      font-size: 1rem;
+      margin: 5px 0 20px;
+      color: #005599;
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: 600;
+    }
+
+    input[type="date"] {
+      padding: 10px;
+      border: 1px solid #99c2ff;
+      border-radius: 10px;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #0077cc;
+      color: white;
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #005fa3;
+      transform: scale(1.03);
+    }
+
+    .about {
+      margin-top: 30px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #003366;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+
+
+    @media (max-width: 780px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+      .main-container {
+        margin: 20px;
+        padding: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="main-container">
+    <div class="logo"></div>
+    <h1>HiAstrology</h1>
+    <p class="subheading">Discover your stars with us</p>
+
+    <label for="dob">Enter Your Date of Birth:</label>
+    <input type="date" id="dob" required>
+    <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
+
+    <div class="about">
+      <p>HiAstrology offers personalized astrological insights based on your birth date. 
+      Whether you're looking for guidance or curious about your zodiac path, we're here to help.</p>
+    </div>
+
+    <footer>
+      © 2025 HiAstrology. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    function sendToWhatsApp() {
+      const dob = document.getElementById("dob").value;
+      if (!dob) {
+        alert("Please enter your Date of Birth.");
+        return;
+      }
+
+      const phoneNumber = "917982728512"; // Replace with your number
+      const message = `Hello from HiAstrology! My Date of Birth is: ${dob}`;
+      const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
