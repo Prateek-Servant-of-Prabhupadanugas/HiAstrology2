@@ -94,6 +94,12 @@
       
       
     }
+    .flexize {
+      display : flex ;
+      flex-direction:column ; 
+      align-items: center;
+
+    }
 
 
 
@@ -107,25 +113,29 @@
         width : 80%;
       }
     }
+    .space {
+      height:30vh ; 
+    }
 
   </style>
 </head>
 <body>
 
-  <div class="main-container">
+  <div class="main-container flexize">
     <div class="logo"></div>
-    <h1>HiAstrology</h1>
-    <p class="subheading">Discover your stars with us</p>
 
-    <label for="dob">Enter Your Date of Birth:</label>
+    <h1>HiAstrology</h1>
+    <p class="subheading">Discover your stars</p>
+
+    <label for="dob">My Date of Birth is :</label>
     <input type="date" id="dob" required>
     <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
 
     <div class="about">
-      <p>HiAstrology offers personalized astrological insights based on your birth date. 
-      Whether you're looking for guidance or curious about your zodiac path, we're here to help.</p>
+      <p>Get your personalized astrological insights based on your birth date. 
+      Whether you're looking for guidance or curious about your life path, we're here to help.</p>
     </div>
-
+    <div class="space"></div>
     <footer>
       © 2025 HiAstrology. All rights reserved.
     </footer>
