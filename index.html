@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <title>HiAstrology - Know Your Stars</title>
   <style>
     body {
@@ -54,7 +56,7 @@
       font-weight: 600;
     }
 
-    input[type="date"] {
+    input[id="dob"] {
       padding: 10px;
       border: 1px solid #99c2ff;
       border-radius: 10px;
@@ -128,7 +130,7 @@
     <p class="subheading">Discover your stars</p>
 
     <label for="dob">My Date of Birth is :</label>
-    <input type="date" id="dob" required>
+    <input type="text" id="dob" placeholder="dd/mm/yyyy" required>
     <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
 
     <div class="about">
@@ -154,6 +156,10 @@
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     }
+
+    flatpickr("#dob", {
+    dateFormat: "d/m/Y"
+  });
   </script>
 
 </body>
