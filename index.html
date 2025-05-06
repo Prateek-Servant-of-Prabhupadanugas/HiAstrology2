@@ -57,11 +57,13 @@
       font-weight: 600;
     }
 
-    input[id="dob"] {
+    #dob {
       padding: 10px;
       border: 1px solid #99c2ff;
-      border-radius: 10px;
+      border-radius: 20px;
       width: 80%;
+      height: auto; 
+      
       font-size: 1rem;
     }
 
@@ -116,10 +118,7 @@
         width : 80%;
       }
     }
-    .space {
-      height:30vh ; 
-    }
-
+    
   </style>
 </head>
 <body>
@@ -131,7 +130,7 @@
     <p class="subheading">Discover your stars with us!</p>
 
     <label for="dob">My Date of Birth is :</label>
-    <input type="date" id="dob" placeholder="dd/mm/yyyy" required>
+    <input type="text" id="dob" required>
     <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
 
     <div class="about">
