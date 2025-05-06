@@ -128,10 +128,10 @@
     <div class="logo"></div>
 
     <h1>HiAstrology</h1>
-    <p class="subheading">Discover your stars</p>
+    <p class="subheading">Discover your stars with us!</p>
 
     <label for="dob">My Date of Birth is :</label>
-    <input type="text" id="dob" placeholder="dd/mm/yyyy" required>
+    <input type="date" id="dob" placeholder="dd/mm/yyyy" required>
     <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
 
     <div class="about">
@@ -153,7 +153,7 @@
       }
 
       const phoneNumber = "919999622113"; // Replace with your number
-      const message = `Hare Krishna \u{1F64F} \n My Date of Birth is: ${dob}`;
+      const message = `Hare Krishna \u{1F64F} \n\n My Date of Birth is: ${dob}`;
       const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
       window.open(url, "_blank");
     }
