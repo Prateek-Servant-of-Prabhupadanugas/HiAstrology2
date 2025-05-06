@@ -57,7 +57,7 @@
       font-weight: 600;
     }
 
-    input[type="text"] {
+    input[type="date"] {
 
       -webkit-appearance: none;
       -moz-appearance: none;
@@ -132,11 +132,11 @@
   <div class="main-container flexize">
     <div class="logo"></div>
 
-    <h1>HiAstrology [Updating2]</h1>
+    <h1>HiAstrology [Updating3]</h1>
     <p class="subheading">Discover your stars with us!</p>
 
     <label for="dob">My Date of Birth is :</label>
-    <input type="text" id="dob" placeholder="dd/mm/yy" required>
+    <input type="date" id="dob" placeholder="dd/mm/yy" required>
     <button onclick="sendToWhatsApp()">Send to WhatsApp</button>
 
     <div class="about">
@@ -163,9 +163,9 @@
       window.open(url, "_blank");
     }
 
-    flatpickr("#dob", {
-    dateFormat: "d/m/Y"
-  });
+  //   flatpickr("#dob", {
+  //   dateFormat: "d/m/Y"
+  // });
   </script>
 
 </body>
